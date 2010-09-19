@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>ES</title>
+<!-- Link for ATOM feed autodiscovery -->
+<link rel="service.feed" type="application/x.atom+xml" title="ES - ATOM Feed" href="http://messze.net/es/atom.xml" />
+<!-- META -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="content-type" name="keywords" content="ES" />
+<meta http-equiv="content-type" name="description" content="ES-PhotoBlog: 25, " />
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="horizon.css" />
+<!-- SCRIPTS -->
+</head>
+
+<body>
+
+<div id="image-info" style="display:none">
+
+<div class="inside">
+<h2>${photo.week} <em>${photo.imagetime}</em> </h2>
+
+<div id="image_comments">
+<ul><li>No Comments Yet.</li></ul>
+</div> <!--/image comments -->
+
+</div>  <!-- /inside -->
+<div class="clear"></div>
+</div> <!--/d2 -->
+
+<div id="header">
+<div class="inside">
+<h1><a href="index.php" title="Return to current image">ES</a></h1>
+<ul>
+<li><a href="index.html" title="Return to Homepage">Home</a></li>
+<li><a href="browse.html" title="Browse">Browse</a></li>
+</ul>
+</div> <!-- /inside -->
+</div> <!-- /header -->
+
+<div id="photobox">
+#if ($photo.week > 1)
+<a href="${photo.week-1}.html">
+#end if
+<img src="${photo.normal_url}" alt="${photo.week}" title="${photo.week}" width="${photo.width}" height="${photo.height}" id="photo" />
+#if ($photo.week > 1)
+</a>
+#end if
+</div> <!-- /photo -->
+
+<div id="infobox">
+<div id="image-navigate" class="inside">
+<ul>
+
+<li class="left">
+#if ($photo.week > 1)
+<a href='${photo.week-1}.html'>
+Previous
+</a>
+#end if
+</li>
+
+<li class="left" style="text-align:center">${photo.imagetime}</li>
+<li class="right" style="text-align:right">
+#if ($photo.week < $currentweek)
+<a href='${photo.week+1}.html'>
+Next
+</a>
+#end if
+
+</li>
+</ul>
+</div>
+</div> <!--/infobox -->
+
+
+<div id="footer">
+<ul>
+<li>Designed by <a href="http://www.cancerbox.com" title="Designed by Scott Craig">SCraig</a></li>
+<li>This website uses valid <a href="http://validator.w3.org/check/referer" title="This website uses Valid xHTML">xHTML</a> / <a href="http://jigsaw.w3.org/css-validator/check/referer" title="This website uses Valid CSS2">CSS</a></li>
+</ul>
+<ul>
+<li>&copy; ES</li>
+<li><a href='atom.xml'>ATOM feed</a></li>
+</ul>
+</div>
+
+
+</body>
+</html>
